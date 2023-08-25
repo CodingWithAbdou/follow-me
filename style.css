@@ -1,0 +1,240 @@
+/* ====== General styles ====== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .wrapper {
+    height: 100vh;
+  }
+  
+  header,
+  footer {
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    background-color: #555454;
+    font-family: "Comfortaa", cursive;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  footer {
+    font-size: 1em;
+  }
+  
+  footer i {
+    font-size: 1.4em;
+    color: #2d8db7;
+  }
+  
+  main {
+    width: 100%;
+    height: 84vh;
+    background-color: #393939;
+    background: linear-gradient(to right, #159957, #155799);
+    position: relative;
+  }
+  
+  .center {
+    width: 630px;
+    margin: 0 auto;
+    padding: 4% 0;
+    overflow: hidden;
+  }
+  
+  .follow {
+    margin: 0 auto;
+    font-family: "Comfortaa", cursive;
+    font-size: 55px;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+  }
+  
+  #socialName {
+    white-space: nowrap;
+    color: #bab7b7;
+    font-size: 45px;
+    position: absolute;
+    margin: 10px 0 0 20px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: opacity 0.4s, transform 0.4s;
+  }
+  
+  #socialName.active {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+  /* ====== Colors for social Icons ====== */
+  /* Twitter */
+  .social-buttons .twitter {
+    background: #50a8ee;
+  }
+  
+  .social-buttons .twitter + .icon-back {
+    background: #2e80c1;
+  }
+  
+  /* Facebook */
+  .social-buttons .facebook {
+    background: #4662a0;
+  }
+  
+  .social-buttons .facebook + .icon-back {
+    background: #203562;
+  }
+  
+  /* Instagram */
+  .social-buttons .instagram {
+    background: #d6249f;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+  }
+  
+  .social-buttons .instagram + .icon-back {
+    background: #285aeb;
+  }
+  
+  /* GitHub */
+  .social-buttons .github {
+    background: #2e3034;
+    color: #fff;
+  }
+  
+  .social-buttons .github + .icon-back {
+    background: #23252a;
+  }
+  
+  /* Google Plus */
+  .social-buttons .google {
+    background: #d93b2b;
+    color: #fff;
+  }
+  
+  .social-buttons .google + .icon-back {
+    background: #c41e0f;
+  }
+  
+  /* LinkedIn */
+  .social-buttons .linkedin {
+    background: #007ebb;
+  }
+  
+  .social-buttons .linkedin + .icon-back {
+    background: #065a83;
+  }
+  
+  /* reddit */
+  .social-buttons .reddit + .icon-back {
+    background: #f03612;
+  }
+  
+  .social-buttons .reddit {
+    background: #bf2608;
+  }
+  
+  /* ====== Position the Social media icon ====== */
+  .social-buttons {
+    height: 70px;
+    margin-top: 90px;
+    width: 630px;
+  }
+  
+  .social-buttons .scene {
+    float: left;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .social-buttons .icon {
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    font-size: 2.2em;
+    color: #fff;
+    outline: 1px solid rgba(255, 255, 255, 0.39);
+  }
+  
+  .social-buttons .icon-back {
+    font-size: 1.6em;
+  }
+  
+  /* ====== Rotation effect ====== */
+  .social-buttons .scene {
+    width: 70px;
+    height: 70px;
+    perspective: 800px;
+    user-select: none;
+  }
+  
+  .social-buttons .cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s all;
+    user-select: none;
+  }
+  
+  .scene:hover .cube,
+  .scene:active .cube {
+    transform: rotateX(90deg);
+    user-select: none;
+  }
+  
+  .social-buttons .icon-front {
+    position: absolute;
+    width: 100%;
+    transform: rotateX(0deg) translate3d(0px, 0px, 35px);
+  }
+  
+  .social-buttons .icon-back {
+    position: absolute;
+    width: 100%;
+    transform: rotateX(-90deg) translate3d(0px, 0px, 35px);
+  }
+  
+  /* ====== Painting background ====== */
+  #overflow {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .paint {
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+  }
+  
+  .paint.hover {
+    animation-name: circleEx;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes circleEx {
+    0% {
+      transform: scale(1);
+      width: 20px;
+      height: 20px;
+    }
+  
+    100% {
+      transform: scale(33);
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
